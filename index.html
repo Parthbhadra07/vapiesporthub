@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vapi Esport Hub</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <div class="header-top">
+      <div class="container">
+
+        <div class="countdown-text">
+          live Matches starts in <span class="span skewBg"><div id="timer">00:00:00</div></span> Days
+        </div>
+  
+        <script>
+          // Set the countdown time (in seconds)
+          let countdownTime = 60 * 180; // 5 minutes
+      
+          // Function to format time as MM:SS
+          function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+          }
+      
+          // Update the timer display every second
+          const timerElement = document.getElementById('timer');
+          const interval = setInterval(() => {
+            if (countdownTime > 0) {
+              countdownTime--;
+              timerElement.textContent = formatTime(countdownTime);
+            } else {
+              clearInterval(interval);
+              timerElement.textContent = "Time's up!";
+            }
+          }, 1000);
+        </script>
+
+        <div class="social-wrapper">
+
+          <p class="social-title">Follow us on :</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="http://www.youtube.com/@Vapi_esport_hub" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/@vapi_esport_hub" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom skewBg" data-header>
+      <div class="container">
+
+        <a href="index.html" class="logo">VapiEsportHub</a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link skewBg" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#live" class="navbar-link skewBg" data-nav-link>Live</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#features" class="navbar-link skewBg" data-nav-link>Upcomming Events</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#shop" class="navbar-link skewBg" data-nav-link>Form</a>
+            </li>
+
+
+            <li class="navbar-item">
+              <a href="#contact-section" class="navbar-link skewBg" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+
+  
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="home"
+        style="background-image: url('./playerunknowns-battlegrounds-4k-0n7c3eey1trj13c8.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Gaming Mania</p>
+
+            <h1 class="h1 hero-title">
+              Join Matches <span class="span">&Win</span>Prizes 
+            </h1>
+
+            <p class="hero-text">
+              🚨 Get ready for the ultimate BGMI showdown! 🚨<br>
+              Join our WhatsApp group for updates and stay tuned on Instagram for daily free and paid tournaments.
+              Let the games begin! 🔥🏆
+              
+
+            </p>
+
+            <button class="btn skewBg" onclick="location.href='#shop'">Join Now</button>
+
+
+          </div>
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
+            <!-- <img src="./01.png" width="700" height="10 00" alt="hero banner" class="w-100"> -->
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+      <div class="section-wrapper">
+
+        
+        <!-- 
+          - #LIVE MATCH
+        -->
+
+        <section class="section live-match" id="live" aria-label="live match">
+          <div class="container">
+            <br>
+            <h2 class="h2 section-title">
+              Watch Live <span class="span">Match</span>
+            </h2>
+
+            <figure class="live-match-banner img-holder" style="--width: 800; --height: 470;">
+
+              <img src="./assets/images/live-match-banner.jpg" width="800" height="470" loading="lazy"
+                alt="Live Match Video" class="img-cover">
+
+              <button class="play-btn" aria-label="play video" onclick="location.href='http://www.youtube.com/@Vapi_esport_hub'">
+                <ion-icon name="play"></ion-icon>
+              </button>
+
+            </figure>
+
+           
+          </div>
+        </section>
+
+      </div>
+
+
+
+
+
+      <!-- 
+        - #FEATURED GAME
+      -->
+
+      <section class="section featured-game" id="features" aria-label="featured game">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            upcomming <span class="span">Events</span>
+          </h2>
+
+          <ul class="has-scrollbar">
+
+           
+            <li class="scrollbar-item">
+              <div class="featured-game-card" style="margin-left: 20pc;">
+
+                <figure class="card-banner img-holder" style="--width: 250; --height: 400;">
+                  <img src="./assets/content1.jpg" width="350" height="500" loading="lazy"
+                    alt="Just for Gamers" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                    <div class="inner">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                    <span class="span">BATTLEGROUND</span><br>
+                    MOBILE INDIA
+                    </a>
+                  </h3>
+                    </div>
+                  
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Just for <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Online Tournament</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="./assets/images/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Just for <span class="span">Gamers</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Online Tournament</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SHOP
+      -->
+
+      <section class="section shop" id="shop" aria-label="shop"
+        style="background-image: url('./assets/images/shop-bg.jpg')">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Join <span class="span">Us</span>
+          </h2>
+
+          <p class="section-text">
+            
+          </p>
+
+          <ul class="has-scrollbar">
+            <div class="join-us-form-wrapper">
+              <div id="joinUsModal" class="modal">
+              <form class="join-us-form">
+                <h3 class="h3">Join Us Now</h3>
+            
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" required class="form-input">
+                </div>
+            
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required class="form-input">
+                </div>
+            
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required class="form-input">
+                </div>
+            
+                <div class="form-group">
+                  <label for="role" class="form-label">Role You’re Interested In</label>
+                  <select id="role" name="role" required class="form-input">
+                    <option value="" disabled selected>-- Select a role --</option>
+                    <option value="player">Player</option>
+                    <option value="spectator">Spectator</option>
+                    <option value="volunteer">Volunteer</option>
+                  </select>
+                </div>
+            
+                <div class="form-group">
+                  <label for="message" class="form-label">Additional Message</label>
+                  <textarea id="message" name="message" placeholder="Enter any additional information" rows="4"
+                    class="form-input"></textarea>
+                </div>
+            
+                <button type="submit" class="btn skewBg">Join Now</button>
+              </form>
+              
+            </div>
+            
+            
+
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="newsletter" aria-label="newsletter">
+        <div class="container">
+
+          <div class="newsletter-card">
+
+            <h2 class="h2">
+              Our <span class="span">Newsletter</span>
+            </h2>
+
+            <form action="" class="newsletter-form">
+
+              <div class="input-wrapper skewBg">
+                <input type="email" name="email_address" aria-label="email" placeholder="Enter your email..." required
+                  class="email-field">
+
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <button type="submit" class="btn newsletter-btn skewBg">
+                <span class="span">Subscribe</span>
+
+                <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="contact-section">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">VapiEsportHub</a>
+
+          <p class="footer-text">
+            where talent meet to success.
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                Address : VapiEsportHub vapi gujarat 
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="call"></ion-icon>
+              </div>
+
+              <a href="tel:+241245654235" class="item-text">Phone : +919510813622</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-open"></ion-icon>
+              </div>
+
+              <a href="mailto:info@exemple.com" class="item-text">Email : vapiesporthub@gmail.com</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Need Help?</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Mail Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions </a>
+          </li>
+
+         
+
+        </ul>
+
+        <div class="footer-wrapper">
+
+          <div class="social-wrapper">
+
+            <p class="footer-list-title">Follow Us</p>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="https://www.instagram.com/@vapi_esport_hub" class="social-link" style="background-color: #cf0689">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="http://www.youtube.com/@Vapi_esport_hub" class="social-link" style="background-color: #fe1f35">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+
+
+            </ul>
+
+          </div>
+
+         
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 VapiEsportHub. All Right Reserved by <a href="#" class="copyright-link">ParthBhadra </a>
+        </p>
+
+        <img src="./assets/images/footer-bottom-img.png" width="340" height="21" loading="lazy" alt=""
+          class="footer-bottom-img">
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
